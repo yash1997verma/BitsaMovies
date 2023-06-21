@@ -129,7 +129,7 @@ function displayMovieDetails(details){
     // console.log(details)
     resultBox.innerHTML = `
     <div class = "movie-poster col-sm-12 col-md-4">
-        <img class ='img-fluid' src = "${(details.Poster != "N/A") ? details.Poster : "image_not_found.png"}" alt = "movie poster">
+        <img class ='img-fluid' src = "${(details.Poster != "N/A") ? details.Poster : "/images/no-poster-available.jpg"}" alt = "movie poster">
     </div>
     <div class = "movie-info col-sm-12 col-md-8 d-flex flex-column justify-content-center">
         <h3 class = "movie-title">${details.Title}</h3>
