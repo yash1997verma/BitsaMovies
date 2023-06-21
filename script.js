@@ -36,6 +36,16 @@ resultBox.addEventListener('click', function(event) {
     }
 });
 
+// for adding and removing hide-search-list class
+function findMovies(event){
+    let searchTerm = (event.target.value);
+    if(searchTerm.length > 0){
+        searchList.classList.remove('hide-search-list');
+        loadMovies(searchTerm);
+    }else {
+        searchList.classList.add('hide-search-list');
+    }
+}
 
 // fetching data from OMDB API
 async function loadMovies(searchTerm){
@@ -90,6 +100,8 @@ function displayMovieList(movies){
     loadMovieDetails();
 }
 
+
+
 //for loading movie page when a movie is clicked
 function loadMovieDetails(){
    
@@ -113,16 +125,6 @@ function loadMovieDetails(){
     });
 }
 
-// for adding and removing hide-search-list class
-function findMovies(event){
-    let searchTerm = (event.target.value);
-    if(searchTerm.length > 0){
-        searchList.classList.remove('hide-search-list');
-        loadMovies(searchTerm);
-    }else {
-        searchList.classList.add('hide-search-list');
-    }
-}
 
 //display fetched movie details
 function displayMovieDetails(details){
@@ -190,7 +192,7 @@ window.addEventListener('click', (event) => {
     }
 });
 
-//for closing watchList trhough close button
+//for closing watchList through close button
 closeWatchList.addEventListener('click', function(){
     watchlistContainer.classList.remove('slide-in');
     watchlistContainer.classList.add('slide-out');
