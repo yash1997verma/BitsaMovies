@@ -1,5 +1,7 @@
 Movies App
 
+The project is hosted on: https://csb-43qfg7.netlify.app/
+
 The Movies App is a web application that allows users to search and manage their favorite movies. It is built using HTML, CSS, and vanilla JavaScript.
 
 Features
